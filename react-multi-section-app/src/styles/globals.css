@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -50,4 +52,80 @@ a {
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+
+.hero { background: linear-gradient(135deg, #0a1729 0%, #1e2937 100%); }
+
+.highlight {
+  background: linear-gradient(90deg, #22d3ee, #c026d3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s linear infinite;
+}
+
+@keyframes shine { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+
+.profile-container {
+  perspective: 1200px;
+  transition: transform 0.3s;
+}
+
+.profile-pic {
+  width: 380px; height: 380px; object-fit: cover;
+  border-radius: 9999px;
+  border: 12px solid rgba(34,211,238,0.3);
+  box-shadow: 0 0 80px -20px #22d3ee;
+  transition: transform 0.1s linear;
+}
+
+.btn-primary, .btn-secondary, .btn-resume {
+  padding: 18px 42px;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-primary { background: #22d3ee; color: #0a1729; }
+.btn-secondary { border: 2px solid #22d3ee; color: white; }
+.btn-resume { background: linear-gradient(45deg, #eab308, #f97316); color: white; }
+
+.btn-primary:hover, .btn-secondary:hover, .btn-resume:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 25px 40px -10px #22d3ee;
+}
+
+.section-title:after {
+  content: ''; position: absolute; bottom: -12px; left: 0;
+  width: 80px; height: 4px; background: linear-gradient(to right, #22d3ee, #c026d3);
+  border-radius: 9999px;
+}
+
+/* Fancy Table + 3D Hover */
+.fancy-table th { padding: 24px 32px; background: #18181b; color: #67e8f9; }
+.fancy-table td { padding: 28px 32px; background: #27272a; transition: all 0.5s cubic-bezier(0.23,1,0.32,1); }
+.fancy-table tr:hover {
+  transform: translateY(-15px) rotateX(8deg) rotateY(8deg);
+  box-shadow: 0 40px 70px -20px rgba(34,211,238,0.4);
+}
+.repo-link, .live-link { color: #67e8f9; font-weight: 600; }
+.live-link:hover { color: #22d3ee; text-decoration: underline; }
+
+/* Skill Cards */
+.skill-card {
+  background: #27272a;
+  padding: 48px 24px;
+  border-radius: 24px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+  border: 1px solid transparent;
+}
+.skill-card:hover {
+  transform: translateY(-20px) rotate(5deg);
+  border-color: #22d3ee;
+  box-shadow: 0 0 70px -15px #22d3ee;
+  color: #67e8f9;
 }

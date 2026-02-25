@@ -9,6 +9,7 @@ import Portfolio from './sections/Portfolio';
 import Blog from './sections/Blog';
 import Contact from './sections/Contact';
 import FAQ from './sections/FAQ';
+import Projects from './sections/Projects';
 
 const App: React.FC = () => {
     return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
                 <About />
                 <Services />
                 <Portfolio />
+                <Projects />
                 <Blog />
                 <Contact />
                 <FAQ />
